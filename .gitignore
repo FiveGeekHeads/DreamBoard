@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.env
+
+# Flask instance folder & database
+instance/
+*.db
+*.sqlite3
+
+# Upload folders (optional)
+app/static/uploads/*
+!app/static/uploads/.gitkeep
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
