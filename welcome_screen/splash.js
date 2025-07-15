@@ -1,3 +1,3 @@
 setTimeout(() => {
-  window.location.href = "dashboard.html"; // or your actual dashboard page
-}, 5000);
+  window.location.href = "../dashboard/dashboard.html"; 
+}, 2000);
