@@ -1,0 +1,98 @@
+/* === COLOR PALETTE VARIABLES === */
+:root {
+  --primary-bg: #a3c4f3;
+  --accent: #f72585;
+  --text-main: #1F1D36;
+  --text-secondary: #4A4E69;
+  --highlight: #cfbaf0;
+  --glow: #ffcfd2;
+  --tagline: #880d1e;
+  --border: #fbf8cc;
+}
+
+/* === GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-main);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 6px solid var(--border); /* 🌟 Added this line */
+  box-shadow: 0 0 30px var(--border); /* optional glow */
+  border-radius: 10px; /* smooth rounded corners */
+  margin: 15px; /* spacing from browser edges */
+  border-color: #3a4a75;
+}
+
+
+/* === CONTAINER === */
+.splash-container {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* === LOGO === */
+.logo {
+  width: 130px;
+  border: 4px solid var(--border);
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--glow);
+  animation: logoPop 1.5s ease forwards;
+  opacity: 0;
+  margin-bottom: 20px;
+}
+
+/* === TEXT === */
+.splash-text {
+  font-size: 3rem;
+  font-family: 'Pacifico', cursive;
+  color: var(--accent);
+  animation: slideUp 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+.tagline {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: var(--tagline);
+  animation: fadeIn 2.5s ease-in-out 0.5s forwards;
+  opacity: 0;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoPop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
